@@ -1,3 +1,49 @@
-Projeto recuperado do Netlify: Interstellar
-Os arquivos são os arquivos publicados no deploy e estão prontos para edição.
-Abra o index.html no editor de código para começar.
+# Interestelar
+
+Site inspirado no filme Interestelar, desenvolvido como projeto de prática em desenvolvimento web.
+
+## Sobre o projeto
+
+O projeto apresenta informações sobre o filme Interestelar por meio de diferentes páginas, incluindo a página inicial, galeria de fotos, comentários e contato.
+
+O objetivo foi praticar a construção de páginas web utilizando HTML e CSS, trabalhando com estruturação de conteúdo, navegação entre páginas e organização de estilos.
+
+## Tecnologias utilizadas
+
+* HTML5
+* CSS3
+* Google Fonts
+* Git
+* GitHub
+
+## Conceitos praticados
+
+* Estruturação de páginas HTML
+* Criação de menus de navegação
+* Links entre páginas
+* Organização de arquivos CSS
+* Responsividade
+* Flexbox
+* Galeria de imagens
+* Organização de um projeto web
+
+## Páginas
+
+* Home
+* Fotos
+* Comentários
+* Contato
+
+## Projeto online
+
+[Visualizar projeto](https://meek-sorbet-154725.netlify.app/)
+
+## Objetivo
+
+Este projeto faz parte da minha evolução no desenvolvimento Front-end e foi desenvolvido para colocar em prática conhecimentos de HTML e CSS.
+
+## Autor
+
+Jefferson Viana Sousa
+
+Estudante de Análise e Desenvolvimento de Sistemas.
