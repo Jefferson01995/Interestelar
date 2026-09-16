@@ -1,0 +1,3 @@
+Projeto recuperado do Netlify: Interstellar
+Os arquivos são os arquivos publicados no deploy e estão prontos para edição.
+Abra o index.html no editor de código para começar.

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não quebre a largura dos elementos */
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: black; /* Fundo preto definido no lugar correto */
+}
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 19px;
+}
+
+/* Os links agora recebem a cor e o efeito de hover diretamente */
+nav ul li a, 
+.footer-list li a {
+    color: aliceblue;
+    transition: .5s;
+}
+
+nav ul li a:hover, 
+.footer-list li a:hover {
+    color: rgb(150, 150, 150); /* Um cinza um pouco mais claro para destacar no fundo preto */
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+}
+
+.logo-footer {
+    vertical-align: middle;
+}
+
+#banner {
+    background-image: url('https://external-preview.redd.it/MY0HsBqCfvQPuYkBon2ZFk96aGfKcGI-pARtS_SHk-Q.jpg?auto=webp&s=c4adf955c34f45b4b97127d0552abb22af59d2ca');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+#trailer-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trailer {
+    width: 50%;
+}
+
+#sinopse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description {
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: rgb(62, 62, 62);
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-content {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 60px;
+}
+
+.card {
+    width: 100%;
+    height: 600px; /* Reduzi um pouco a altura estática para telas padrões de computador */
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.banner-1 {
+    background-image: url('https://hips.hearstapps.com/digitalspyuk.cdnds.net/14/43/4576263801.jpg?resize=980:*');
+}
+
+.banner-2 {
+    background-image: url('https://thumbs.dreamstime.com/b/jessica-chastain-santa-monica-usa-de-fevereiro-no-pr%C3%AAmio-do-esp%C3%ADrito-independente-filme-em-monicapicture-paul-smithfeatureflash-313457219.jpg');
+}
+
+.banner-3 {
+    background-image: url('https://www.princessly.com/cdn/shop/products/anne-hathaway-royal-blue-satin-slip-formal-evening-celebrity-dress-interstellar-premiere-241_1024x1024.jpg?v=1669106047');
+}
+
+footer {
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    .footer-navigation {
+        display: block;
+    }
+
+    .logo {
+        margin-left: 9px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #banner {
+        background-position: 40% 20%;
+    }
+
+    #trailer-container {
+        width: 100%;
+        height: auto; /* Permite que o container cresça conforme os itens quebram linha */
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer {
+        width: 100%;
+        display: flex;
+        margin-left: 0;
+    }
+
+    #sinopse {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+}
