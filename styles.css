@@ -143,7 +143,7 @@ nav ul li a:hover,
 .card {
     width: 100%;
     height: auto; /* Removemos a altura fixa */
-    aspect-ratio: 2 / 4; /* Força o cartão a ter sempre a proporção vertical de um poster (ex: 400x600) */
+    aspect-ratio: 2 / 3; /* Força o cartão a ter sempre a proporção vertical de um poster (ex: 400x600) */
     background-size: cover;
     background-position: center top; 
     border-radius: 4px; /* Cantos ligeiramente mais arredondados */
