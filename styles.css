@@ -3,13 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding não quebre a largura dos elementos */
+    box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
 
 body {
-    background-color: black; /* Fundo preto definido no lugar correto */
+    background-color: rgb(0, 0, 0);
 }
 
 header {
@@ -34,7 +34,6 @@ li {
     font-size: 19px;
 }
 
-/* Os links agora recebem a cor e o efeito de hover diretamente */
 nav ul li a, 
 .footer-list li a {
     color: aliceblue;
@@ -43,7 +42,7 @@ nav ul li a,
 
 nav ul li a:hover, 
 .footer-list li a:hover {
-    color: rgb(150, 150, 150); /* Um cinza um pouco mais claro para destacar no fundo preto */
+    color: rgb(150, 150, 150);
 }
 
 .logo {
@@ -65,44 +64,48 @@ nav ul li a:hover,
 
 #trailer-container {
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .content {
-    width: 60%;
+    width: 80%; /* Aumenta a largura útil de 60% para 80% */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px; /* Cria um espaço fixo entre o vídeo e a sinopse em vez de margem manual */
 }
 
 .trailer {
     width: 50%;
+    height: auto;
 }
 
 #sinopse {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
+    justify-content: center;
+    margin-left: 0; /* Remove os 30px manuais que espremiam o texto */
 }
 
 .description {
     color: #fff;
-    font-size: 19px;
+    font-size: 18px;
     font-family: 'Kdam Thmor Pro', sans-serif;
-    width: 100%;
-    margin-left: 10px;
+    width: 100%; /* Faz o texto ocupar toda a largura disponível da sinopse */
+    line-height: 1.6; /* Dá espaçamento entre as linhas para não amontoar */
+    margin-left: 0; /* Zera a margem manual de 10px */
 }
 
 .button {
     width: 200px;
-    height: 60px;
+    height: 50px;
     background-color: rgb(62, 62, 62);
     color: #fff;
-    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: .8s;
@@ -113,8 +116,8 @@ nav ul li a:hover,
     font-weight: bold;
     border: none;
     outline: none;
-    margin-top: 25px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: 0; /* Zera a margem manual de 10px */
 }
 
 .button:hover {
@@ -139,19 +142,23 @@ nav ul li a:hover,
 
 .card {
     width: 100%;
-    height: 600px; /* Reduzi um pouco a altura estática para telas padrões de computador */
+    height: auto; /* Removemos a altura fixa */
+    aspect-ratio: 2 / 4; /* Força o cartão a ter sempre a proporção vertical de um poster (ex: 400x600) */
     background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 5px;
+    background-position: center top; 
+    border-radius: 4px; /* Cantos ligeiramente mais arredondados */
     cursor: pointer;
     transition: 1s;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0 0 20px 10px;
+    padding: 0 0 20px 15px;
     color: #fff;
-    font-size: 17px;
+    font-size: 18px;
     font-family: 'Kdam Thmor Pro', sans-serif;
+    
+    /* Adiciona uma sombra preta atrás do texto para garantir leitura em qualquer fundo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9), -1px -1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .card:hover {
@@ -194,15 +201,18 @@ span {
     align-items: center;
 }
 
+/* --- REGRAS MOBILE (MAX-WIDTH: 768PX) --- */
 @media(max-width: 768px) {
 
-    footer{
+    footer {
        width: 100%;
+       height: auto;
        display: flex;
        flex-direction: column;
        align-items: center;
        justify-content: center;
     }
+
     .footer-navigation {
         display: block;
     }
@@ -220,7 +230,7 @@ span {
 
     #trailer-container {
         width: 100%;
-        height: auto; /* Permite que o container cresça conforme os itens quebram linha */
+        height: auto;
         display: flex;
         flex-direction: column;
         margin-top: 50px;
@@ -228,35 +238,35 @@ span {
     }
 
     .content {
-        width: 95%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Empilha vídeo e sinopse */
         align-items: center;
+        gap: 20px;
     }
 
     .trailer {
-        width: 89%;
-        display: block;
+        width: 90%;
+        height: auto;
     }
 
-#sinopse { 
-        width: 100%; 
+    #sinopse { 
+        width: 90%; /* Dá largura total para a sinopse se espalhar */
         display: flex; 
         flex-direction: column; 
         align-items: center; 
-        margin-top: 20px; 
         margin-left: 0;
     } 
 
     .description { 
-        width: 90%; 
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
         text-align: center; 
     } 
 
     .button { 
-        width: 90%; /* Mesma largura do texto para ficarem simétricos */
+        width: 90%;
         max-width: 320px; 
         margin-top: 25px; 
         margin-left: 0;
@@ -270,13 +280,13 @@ span {
         justify-items: center;
     }
 
-    .card{
+    .card {
         width: 85%;
         max-width: 320px;
         height: 450px;
     }
 
-    .actor-cards-container{
+    .actor-cards-container {
         width: 100%;
         display: flex;
         justify-content: center;
