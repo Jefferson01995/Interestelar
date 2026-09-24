@@ -64,18 +64,8 @@ main {
     height: 350px;
     cursor: pointer;
     box-shadow: 2px 2px 150px 2px #737272;
-    transition: 1.5s;
-    border: 8px double #CACACA;
 }
 
-
-
-.img-galeria img:hover {
-    border-radius: 3px;
-    width: 680px;
-    height: 380px;
-    border: 10px double #878787;
-}
 
 footer {
     height: 250px;
@@ -106,12 +96,23 @@ span {
 @media(max-width: 768px) {
     .container-galeria {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .img-galeria {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .img-galeria img {
-        width: 400px;
-        height: 500px;
-        box-shadow: 2px 2px 100px 2px #737272;
+        width: 90%;
+        max-width: 380px;
+        height: auto;
+        box-shadow: 2px 2px 30px 2px #737272;
     }
 
     .footer-navigation {
